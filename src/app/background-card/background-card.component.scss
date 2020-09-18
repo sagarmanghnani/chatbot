@@ -1,0 +1,21 @@
+
+.background-card-container{
+    .mat-card{
+        padding: 0;
+        .header{
+            padding-left: 50px;
+            padding-top: 30px;
+            background: linear-gradient(90deg, var(--secondary-background-color),var(--secondary-background-darker));
+            padding: 0px;
+            color: var(--primary-font-color);
+            .chat-bot-name{
+                font-size: var(--heading-size-1);
+                padding-bottom: 20px;
+            }
+
+            .greetings{
+                font-size: var(--heading-size-2);
+            }
+        }
+    }
+}
