@@ -9,7 +9,14 @@ export class BackgroundCardComponent implements OnInit {
 
   constructor() { }
 
+  questionArr = [];
   ngOnInit(): void {
+    this.questionArr = [
+      "Can I redeem my FB before original term?",
+      "How do I pay my Credit card bill?", 
+      "How can I get my Account Statement?",
+      "What is the tenure of Fixed Deposit?"
+  ]
   }
 
 }

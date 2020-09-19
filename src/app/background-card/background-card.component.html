@@ -2,16 +2,43 @@
     <mat-card class="card">
         <div class="header">
             <div class="chat-bot-name">
-                IRIS
+                <p> IRIS </p>
             </div>
 
             <div class="greetings">
-                Hello
+               <p> Hello </p>
             </div>
 
-            <div>
-                I am Iris, a Virtual Assistant <br> How may I help you?
+            <div class="desc">
+                <p> I am Iris, a Virtual Assistant <br> How may I help you? </p>
+            </div>
+
+            <div class="extra-height"></div>
+        </div>
+
+        <div class="card-body">
+
+            <div class="robot-container">
+                <i class="fas fa-robot robo-icon"></i>
+            </div>
+
+            <div class="faq">
+                <p> Frequently Asked questions</p>
+                <div class="question">
+                    <p> ? </p>
+                </div>
+            </div>
+
+            <div class="questions-container" *ngFor="let question of questionArr"  >
+                <app-faq-question [title] = question class="fadein-animate"></app-faq-question>
+            </div>
+
+            <div class="conversation-container">
+                <button class="conversation-btn"> <span> <i class="far fa-comment-alt"> </i></span> Start a new Conversation  </button>
             </div>
         </div>
     </mat-card>
+
+    
+
 </div>

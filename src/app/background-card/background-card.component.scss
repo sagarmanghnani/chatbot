@@ -2,12 +2,17 @@
 .background-card-container{
     .mat-card{
         padding: 0;
+        border-radius: 20px !important;
+        padding-bottom: 20px;
         .header{
-            padding-left: 50px;
-            padding-top: 30px;
+            padding-left: 50px !important;
+            padding-top: 30px !important;
             background: linear-gradient(90deg, var(--secondary-background-color),var(--secondary-background-darker));
             padding: 0px;
             color: var(--primary-font-color);
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
             .chat-bot-name{
                 font-size: var(--heading-size-1);
                 padding-bottom: 20px;
@@ -15,7 +20,103 @@
 
             .greetings{
                 font-size: var(--heading-size-2);
+                padding-bottom: 20px;
+            }
+
+            .desc{
+                line-height: 27px;
+                font-size: var(--heading-size-3);
+            }
+            .extra-height{
+                height: 100px;
+            }
+        }
+
+        .card-body{
+            height: 50vh;
+            position: relative;
+            bottom: 65px;
+            background: white;
+            width: 90%;
+            margin: auto;
+            box-shadow: 2px 1px 4px 0px #eeeeee;
+            border: 1px solid #eee;
+            padding-right: 30px;
+            box-sizing: border-box;
+            .faq{
+                padding-top: 45px;
+                padding-left: 30px;
+                display: flex;
+                color: #3a3a3a;
+                .question{
+                    margin-left: 5px;
+                    box-sizing: border-box;
+                    width: 20px;
+                    height: 20px;
+                    background: #fef6e6;
+                    border-radius: 50%;
+                    color: #f07539;
+                    p{
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+            }
+            .questions-container{
+                padding-left: 30px;
+            }
+        }
+
+        .robot-container{
+            margin-left: 20px;
+            background: red;
+            position: absolute;
+            box-sizing: border-box;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            top: -39px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            background: #ef6336;
+            box-shadow: rgba(128, 128, 128, 4%);
+            .robo-icon{
+                font-size: 40px;
+                color: white;
+            }
+        }
+
+        .conversation-container{
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            margin-top: 20px;
+            .conversation-btn{
+                background: white;
+                padding-left: 25px;
+                padding-right: 25px;
+                border-radius: 30px;
+                border: 1px solid #ddd;
+                box-shadow: 2px 1px 4px 0px #eeeeee;
+                color: #3a3a3a;
+                font-weight: 550;
             }
         }
     }
+
+    .fadein-animate{
+        animation: fadein 2s;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+
 }

@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { BackgroundCardComponent } from './background-card/background-card.component';
 import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FaqQuestionComponent } from './faq-question/faq-question.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BackgroundCardComponent
+    BackgroundCardComponent,
+    FaqQuestionComponent
   ],
   imports: [
     BrowserModule,
