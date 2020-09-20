@@ -1,7 +1,15 @@
-<div class="chat-bot-container bottom-to-top" *ngIf="!showChatBtn" >
-    <app-background-card></app-background-card>
+<div class="chat-container">
+    <div class="chat-bot-container bottom-to-top" *ngIf="!showChatBtn">
+        <app-background-card></app-background-card>
+    </div>
+
+    <div class="chat-btn-container" #chatbtncontainer (click)="openChatBtn()" [hidden] = "!showChatBtn">
+        <button class="chat-btn"> <img src="assets/icons/support.png"> </button>
+    </div>
 </div>
 
-<div class="chat-btn-container" #chatbtncontainer (click)="openChatBtn()" [hidden] = "!showChatBtn">
-    <button class="chat-btn"> <img src="assets/icons/support.png"> </button>
+
+
+<div class="intro-section">
+    Want to talk to us? <br>Click on the bottom right button to continue
 </div>

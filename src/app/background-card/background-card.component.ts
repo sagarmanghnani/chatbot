@@ -24,8 +24,8 @@ export class BackgroundCardComponent implements OnInit {
   //     "How can I get my Account Statement?",
   //     "What is the tenure of Fixed Deposit?"
   // ]
-  this.questionArr[0] = questionsArr.default[0];
-  let i = 1;
+  // this.questionArr[0] = questionsArr.default[0];
+  let i = 0;
   let offset = 0;
   
     let timeout = setInterval(() => {

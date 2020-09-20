@@ -4,6 +4,10 @@
     margin-left: auto;    
 }
 
+.chat-container{
+    position: relative;
+}
+
 .chat-btn-container{
     display: flex;
     justify-content: flex-end;
@@ -28,6 +32,19 @@
 .bottom-to-top{
     position: relative;
     animation: bottomtop 2s;
+    right: 5px;
+}
+
+.intro-section{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    background: orange;
+    color: white;
 }
 
 @keyframes bottomtop{
@@ -42,5 +59,6 @@
 @media screen and (max-width:568px){
     .chat-bot-container{
         max-width: 568px;
+        position: relative;
     }
 }

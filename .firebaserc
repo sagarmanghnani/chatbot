@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chatbot-1dc20": {
+      "hosting": {
+        "chatbot": [
+          "chatbot-1dc20"
+        ]
+      }
+    }
+  }
+}
