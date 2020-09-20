@@ -1,18 +1,23 @@
-<div>
+<div style="height: 100%;overflow-y: scroll;position: relative;">
 
     <div *ngIf="showAllMessages?.length" >
         <div *ngFor="let message of showAllMessages" >
-            <div *ngIf="message.myMessage" >
+            <div *ngIf="message.myMessage" style="margin-bottom: 5px;" >
                 <app-show-message [message] = "message" (passSelectedMessage) = "processSelectedMessage($event)" ></app-show-message>
             </div>
 
-            <div *ngIf="!message.myMessage" >
+            <div *ngIf="!message.myMessage" style="margin-bottom: 5px;" >
                 <app-show-message [message] = "message" (passSelectedMessage) = processSelectedMessage($event) ></app-show-message>
             </div>
         </div>
     </div>
 
-    <div>
-        <input type="text" [(ngModel)]="newmessage" (keyup.enter)="sendMessage()">  
+    <div class="user-message-container">
+        <div class="input-container">
+            <input type="text" [(ngModel)]="newmessage" placeholder="Send Message...." (keyup.enter)="sendMessage()">  
+        </div>
+        <div>
+            <button (click)="sendMessage()" class="send-msg-btn"> Send </button>
+        </div>
     </div>
 </div>

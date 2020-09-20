@@ -22,25 +22,31 @@
                 <i class="fas fa-robot robo-icon"></i>
             </div>
 
-            <div class="faq">
-                <p> Frequently Asked questions</p>
-                <div class="question">
-                    <p> ? </p>
+            <div *ngIf="!showChatBox" >
+                <div class="faq">
+                    <p> Frequently Asked questions</p>
+                    <div class="question">
+                        <p> ? </p>
+                    </div>
+                </div>
+    
+                <div class="questions-container fadein-animate" *ngFor="let question of questionArr" (click)="selectQuestions(question)">
+                    <app-faq-question [title] = question?.title></app-faq-question>
+                </div>
+    
+                <div class="conversation-container">
+                    <button class="conversation-btn" (click)="showChatBoxOnScreen()"> <span> <i class="far fa-comment-alt"> </i></span> Start a new Conversation  </button>
                 </div>
             </div>
 
-            <div class="questions-container" *ngFor="let question of questionArr" (click)="selectQuestions(question)" >
-                <app-faq-question [title] = question.title class="fadein-animate"></app-faq-question>
-            </div>
-
-            <div class="conversation-container">
-                <button class="conversation-btn"> <span> <i class="far fa-comment-alt"> </i></span> Start a new Conversation  </button>
+            <div [hidden] = "!showChatBox" style="padding-left: 30px;padding-top: 40px;height: 90%;">
+                <app-chatbox  #chatbox></app-chatbox>
             </div>
         </div>
     </mat-card>
 
 
-    <app-chatbox  #chatbox></app-chatbox>
+    
 
     
 

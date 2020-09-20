@@ -16,6 +16,7 @@ export class BackgroundCardComponent implements OnInit {
   @ViewChild('chatbox')chatbox:ChatboxComponent
   questionArr = [];
   message:Messages = new Messages();
+  showChatBox:boolean = false;
   ngOnInit(): void {
   //   this.questionArr = [
   //     "Can I redeem my FB before original term?",
@@ -23,10 +24,24 @@ export class BackgroundCardComponent implements OnInit {
   //     "How can I get my Account Statement?",
   //     "What is the tenure of Fixed Deposit?"
   // ]
-  this.questionArr = questionsArr.default
+  this.questionArr[0] = questionsArr.default[0];
+  let i = 1;
+  let offset = 0;
+  
+    let timeout = setInterval(() => {
+      if(i == questionsArr.default.length - 1){
+        clearInterval(timeout);
+      }
+      this.questionArr.push(questionsArr.default[i]);
+      offset += 2000;
+      i++;
+
+    }, offset + 2000);
+  
   }
 
   selectQuestions(question){
+    this.showChatBoxOnScreen();
     let answerMessage:Messages = new Messages();
     answerMessage.msg = question.answer;
     UtilsService.globalMessageCounter++;
@@ -51,6 +66,10 @@ export class BackgroundCardComponent implements OnInit {
     }
 
 
+  }
+
+  showChatBoxOnScreen(){
+    this.showChatBox = true;
   }
 
 }

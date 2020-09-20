@@ -1,0 +1,28 @@
+.send-msg-btn{
+    width: 70px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 5px 4px 0px #eeeeee;
+    background: linear-gradient(90deg, var(--secondary-background-color), var(--secondary-background-darker));
+}
+
+.user-message-container{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+    background: white;
+    .input-container{
+        flex: 1;
+        input{
+            height: 30px;
+            width: 92%;
+            border-radius: 10px;
+            border: 1px solid #dedede;
+        }
+    }
+}
