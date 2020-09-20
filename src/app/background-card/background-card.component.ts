@@ -33,10 +33,10 @@ export class BackgroundCardComponent implements OnInit {
         clearInterval(timeout);
       }
       this.questionArr.push(questionsArr.default[i]);
-      offset += 2000;
+      offset += 1000;
       i++;
 
-    }, offset + 2000);
+    }, offset + 1000);
   
   }
 
