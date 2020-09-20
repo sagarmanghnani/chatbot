@@ -1,0 +1,17 @@
+.message-container{
+    background: #f28e5d;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border: 1px solid #dede;
+    p{
+        margin: 0;
+    }
+
+    .timestamp{
+        text-align:right;
+    }
+}

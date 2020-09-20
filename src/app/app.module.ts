@@ -7,11 +7,16 @@ import { BackgroundCardComponent } from './background-card/background-card.compo
 import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FaqQuestionComponent } from './faq-question/faq-question.component';
+import { ChatboxComponent } from './chatbox/chatbox.component';
+import { ShowMessageComponent } from './show-message/show-message.component';
+import {UtilsService} from './utils.service';
 @NgModule({
   declarations: [
     AppComponent,
     BackgroundCardComponent,
-    FaqQuestionComponent
+    FaqQuestionComponent,
+    ChatboxComponent,
+    ShowMessageComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +24,9 @@ import { FaqQuestionComponent } from './faq-question/faq-question.component';
     MatCardModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    UtilsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
