@@ -20,6 +20,8 @@
             .greetings{
                 font-size: var(--heading-size-2);
                 padding-bottom: 5px;
+                display: flex;
+                align-items: center;
             }
 
             .desc{
@@ -117,10 +119,14 @@
 
 @media only screen and (max-width:580px) {
     mat-card{
-        border-radius: none !important;
+        border-radius: 0px !important;
     }
 
     .background-card-container{
-        border-radius: none;
+        border-radius: 0px;
+    }
+
+    .header{
+        border-radius: 0px !important;
     }
 }

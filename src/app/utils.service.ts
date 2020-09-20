@@ -20,14 +20,20 @@ export class UtilsService {
 
   prettyPrintDateTime(hour, minutes){
     let isAM:boolean = true;
-    if(hour > 12){
-      hour = hour - 12;
-    }
 
     if(hour >= 12){
       isAM = false;
     }
     let ampm = (isAM ? ' AM':' PM');
+
+    if(hour > 12){
+      hour = hour - 12;
+    }
+
+    if(minutes < 10){
+      minutes = `0${minutes}`;
+    }
+
     return `${hour}:${minutes}${ampm}`;
   }
 
