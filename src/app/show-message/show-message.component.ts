@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { Messages } from '../Messages';
 import { UtilsService } from '../utils.service';
 
@@ -9,8 +9,8 @@ import { UtilsService } from '../utils.service';
 })
 export class ShowMessageComponent implements OnInit {
 
-  @Input() message:Messages
-
+  @Input() message:Messages;
+  @Output() passSelectedMessage:EventEmitter<Messages> = new EventEmitter();
   constructor(
     public utilService:UtilsService
   ) { }
@@ -24,5 +24,10 @@ export class ShowMessageComponent implements OnInit {
       this.message = changes['message'].currentValue;
     }
   }
+
+  processQuestion(){
+    this.passSelectedMessage.emit(this.message);
+  }
+
 
 }

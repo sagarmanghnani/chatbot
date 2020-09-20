@@ -1,4 +1,4 @@
-<div class="message-container">
+<div class="message-container" [ngClass]="{'user-message': message.myMessage, 'system-message':!message.myMessage, 'question-css':message.isQuestion}" (click)="processQuestion()"  >
     <div>
         <p> {{message?.msg}} </p>
     </div>

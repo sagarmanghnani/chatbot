@@ -1,5 +1,4 @@
 .message-container{
-    background: #f28e5d;
     color: white;
     padding-left: 10px;
     padding-right: 10px;
@@ -14,4 +13,19 @@
     .timestamp{
         text-align:right;
     }
+}
+
+.user-message{
+    background: black;
+}
+
+.system-message{
+    background: #f28e5d;
+}
+
+.question-css{
+    color: #f28e5d;
+    border: 1px solid;
+    border-color: #f28e5d;
+    background: transparent;
 }

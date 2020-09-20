@@ -3,4 +3,5 @@ export class Messages {
     timestamp:string;
     myMessage:boolean;
     id:number;
+    isQuestion:boolean;
 }

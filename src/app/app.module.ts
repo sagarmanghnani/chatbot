@@ -10,6 +10,7 @@ import { FaqQuestionComponent } from './faq-question/faq-question.component';
 import { ChatboxComponent } from './chatbox/chatbox.component';
 import { ShowMessageComponent } from './show-message/show-message.component';
 import {UtilsService} from './utils.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import {UtilsService} from './utils.service';
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     UtilsService

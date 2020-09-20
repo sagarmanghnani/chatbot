@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="questions-container" *ngFor="let question of questionArr"  >
+            <div class="questions-container" *ngFor="let question of questionArr" (click)="selectQuestions(question)" >
                 <app-faq-question [title] = question.title class="fadein-animate"></app-faq-question>
             </div>
 
@@ -39,7 +39,8 @@
         </div>
     </mat-card>
 
-    <app-show-message [message] = "message"></app-show-message>
+
+    <app-chatbox  #chatbox></app-chatbox>
 
     
 

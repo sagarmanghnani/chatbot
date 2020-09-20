@@ -1,0 +1,18 @@
+<div>
+
+    <div *ngIf="showAllMessages?.length" >
+        <div *ngFor="let message of showAllMessages" >
+            <div *ngIf="message.myMessage" >
+                <app-show-message [message] = "message" (passSelectedMessage) = "processSelectedMessage($event)" ></app-show-message>
+            </div>
+
+            <div *ngIf="!message.myMessage" >
+                <app-show-message [message] = "message" (passSelectedMessage) = processSelectedMessage($event) ></app-show-message>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <input type="text" [(ngModel)]="newmessage" (keyup.enter)="sendMessage()">  
+    </div>
+</div>
