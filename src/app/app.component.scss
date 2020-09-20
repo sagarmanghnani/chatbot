@@ -5,7 +5,9 @@
 }
 
 .chat-container{
-    position: relative;
+    position: absolute;
+    right: 0px;
+    bottom: 80px;
 }
 
 .chat-btn-container{
@@ -32,7 +34,7 @@
 .bottom-to-top{
     position: relative;
     animation: bottomtop 2s;
-    right: 5px;
+    // right: 5px;
 }
 
 .intro-section{
@@ -60,5 +62,11 @@
     .chat-bot-container{
         max-width: 568px;
         position: relative;
+        height: 100vh;
+    }
+
+    .chat-container{
+        bottom: 0;
+        right: 0px;
     }
 }
