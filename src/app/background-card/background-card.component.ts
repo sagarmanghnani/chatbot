@@ -72,4 +72,9 @@ export class BackgroundCardComponent implements OnInit {
     this.showChatBox = true;
   }
 
+  hideChatBox(){
+    this.showChatBox = false;
+    this.chatbox.showAllMessages = [];
+  }
+
 }
