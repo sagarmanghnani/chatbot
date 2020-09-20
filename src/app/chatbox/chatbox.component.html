@@ -1,6 +1,6 @@
-<div style="height: 100%;overflow-y: scroll;position: relative;">
+<div style="height: 45vh;position: relative;">
 
-    <div *ngIf="showAllMessages?.length" >
+    <div *ngIf="showAllMessages?.length" style="overflow-y: scroll;position: relative;height: 80%;">
         <div *ngFor="let message of showAllMessages" >
             <div *ngIf="message.myMessage" style="margin-bottom: 5px;" >
                 <app-show-message [message] = "message" (passSelectedMessage) = "processSelectedMessage($event)" ></app-show-message>
@@ -21,3 +21,4 @@
         </div>
     </div>
 </div>
+

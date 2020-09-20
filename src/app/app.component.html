@@ -1,3 +1,7 @@
-<div class="chat-bot-container">
+<div class="chat-bot-container bottom-to-top" *ngIf="!showChatBtn" >
     <app-background-card></app-background-card>
+</div>
+
+<div class="chat-btn-container" #chatbtncontainer (click)="openChatBtn()" [hidden] = "!showChatBtn">
+    <button class="chat-btn"> <img src="assets/icons/support.png"> </button>
 </div>

@@ -1,5 +1,41 @@
 .chat-bot-container{
-    width: 400px;
-    margin-left: 30px;
-    margin-top: 40px;
+    width: 100vw;
+    max-width: 400px;
+    margin-left: auto;    
+}
+
+.chat-btn-container{
+    display: flex;
+    justify-content: flex-end;
+    right: 10px;
+    position: fixed;
+    bottom: 0px;
+    .chat-btn{
+        margin-top: 10px;
+        height: 80px;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(90deg, var(--secondary-background-color), var(--secondary-background-darker));
+        border: none;
+        box-shadow: 1px 2px 8px 1px grey;
+        margin-bottom: 10px;
+    }
+}
+
+.bottom-to-top{
+    position: relative;
+    animation: bottomtop 2s;
+}
+
+@keyframes bottomtop{
+    from{
+        bottom: -1000px;
+    } 
+    to{
+        bottom: 0px;
+    }
 }
